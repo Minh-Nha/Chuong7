@@ -15,13 +15,16 @@ internal class Chuong7_Bai1
         Console.WriteLine("B.Xuat mang vua nhap");
         XuatMangSoNguyen(arr);
         Console.WriteLine();
+        Console.WriteLine();
         //C.Xuat cac so chan trong mang
         Console.WriteLine("C.Xuat cac so chan trong mang");
         XuatSoChanTrongMang(arr);
         Console.WriteLine();
+        Console.WriteLine();
         //D.Xuat cac so la so nguyen to trong mang
         Console.WriteLine("D.Xuat cac so nguyen to trong mang");
         XuatSoNguyenToTrongMang(arr);
+        Console.WriteLine();
         Console.WriteLine();
         //E.Tinh trung binh cong cac phan tu trong mang
         Console.WriteLine("E.Tinh trung binh cong trong mang");
@@ -30,6 +33,7 @@ internal class Chuong7_Bai1
         //F.Dem so luong so hoan thien co trong mang
         Console.WriteLine("F.Dem so hoan thien trong mang");
         DemSoLuongSoHoanThien(arr);
+        Console.WriteLine();
         //G.Tim kiem vi tri cuoi cung cua phan tu x trong mang
         Console.WriteLine("G.Tim vi tri cuoi cung cua phan tu x trong mang");
         int x = 0;
@@ -46,11 +50,50 @@ internal class Chuong7_Bai1
             Console.WriteLine($"Vi tri cuoi cung cua {x} troong mang la {vt}");
         }
         //H.Tim vi tri so nguyen to dau tien trong mang neu co 
+        Console.WriteLine();
+        Console.WriteLine("H.Tim vi tri so nguyen to dau tien trong mang neu co ");
+        SoNguyenToDauTien(arr);
+        Console.WriteLine();
+        //I.Tim phan tu lon nhat trong mang
+        Console.WriteLine("I.Tim phan tu lon nhat trong mang");
+        PhanTuLonNhat(arr);
+        Console.WriteLine();
+        //                                      
     }
 
+    //I.Tim phan tu lon nhat trong mang
+    static void PhanTuLonNhat(int[] arr)
+    {
+        int max = arr[0];
+        foreach (int i in arr)
+        {
+            if (i > max)
+            {
+                max = i;
+            }    
+        }
+        Console.WriteLine($"Phan tu lon nhat trong mang la {max}");
+    }
+
+
     //H.Tim vi tri so nguyen to dau tien trong mang neu co 
+    static void SoNguyenToDauTien(int[] arr)
+    {
+        int dem = 0;
 
+        for (int i = 0; i < arr.Length; i++)
+        {
+            if (KiemTraSoNguyenTo(arr[i]))
+            {
+                dem++;
+                if (dem == 1)
+                {
+                    Console.WriteLine($"Vi tri so nguyen to dau tien trong mang la vi tri thu arr[{i}]");
+                }
+            }
+        }
 
+    }
 
     //G.Tim vi tri cuoi cung cua x trong mang
     static int TimViTriCuoiCungCuaPhanTuTrongMang(int[] arr, int x)
