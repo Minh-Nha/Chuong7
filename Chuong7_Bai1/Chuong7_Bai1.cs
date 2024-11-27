@@ -58,7 +58,35 @@ internal class Chuong7_Bai1
         Console.WriteLine("I.Tim phan tu lon nhat trong mang");
         PhanTuLonNhat(arr);
         Console.WriteLine();
-        //                                      
+        //J.Tìm số dương nhỏ nhất trong mảng
+        Console.WriteLine("J.Tim so duong nho nhat trong mang");
+        SoDuongNhoNhat(arr);
+        Console.WriteLine();
+    }
+
+
+
+    //J.Tim so duong nho nhat trong mang
+    static void SoDuongNhoNhat(int[] arr)
+    {
+        int min = int.MaxValue;
+        bool found = false;
+
+        foreach (int i in arr)
+        {
+            if (i < min && i >= 0 )
+            {
+               min = i;
+               found = true;
+            }
+        }
+        if (found)
+        {
+            Console.WriteLine($"So duong nho nhat trong mang la {min}");
+        }else
+        {
+            Console.WriteLine("Mang khong co so duong nao");
+        }
     }
 
     //I.Tim phan tu lon nhat trong mang
