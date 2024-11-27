@@ -47,10 +47,10 @@ internal class Chuong7_Bai1
         }
         else
         {
-            Console.WriteLine($"Vi tri cuoi cung cua {x} troong mang la {vt}");
+            Console.WriteLine($"Vi tri cuoi cung cua {x} trong mang la {vt}");
         }
         //H.Tim vi tri so nguyen to dau tien trong mang neu co 
-        Console.WriteLine();
+        Console.WriteLine();     
         Console.WriteLine("H.Tim vi tri so nguyen to dau tien trong mang neu co ");
         SoNguyenToDauTien(arr);
         Console.WriteLine();
@@ -62,9 +62,38 @@ internal class Chuong7_Bai1
         Console.WriteLine("J.Tim so duong nho nhat trong mang");
         SoDuongNhoNhat(arr);
         Console.WriteLine();
+        //K.Sap xep cac phan tu cua mang theo thu tu tang dan
+        Console.WriteLine("K.Sap xep cac phan tu cua mang theo thu tu tang dan");
+        SapXepTangDan(arr);
+        Console.WriteLine();
+        Console.WriteLine();
+        //L.Kiem tra mang co thu tu tang khong
+        Console.WriteLine("L.Kiem tra mang co thu tu tang khong");
+        bool thuTuTangDan = ThuTuTangDan(arr);
+        Console.WriteLine(thuTuTangDan == true ? "Mang co thu tu tang dan" : "Mang khong co thu tu tang dan");
+        Console.WriteLine();
     }
 
+    //L.Kiem tra mang co thu tu tang hay khong
+    static bool ThuTuTangDan(int[] arr)
+    {
+        for (int i = 0; i < arr.Length - 1; i++)
+        {
+            if (arr[i] > arr[i + 1])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 
+    //K.Sap xep cac phan tu cua mang theo thu tu tang dan
+    static void SapXepTangDan(int[] arr)
+    {
+        Array.Sort(arr);
+        Console.WriteLine("Mang sau khi tang dan: ");
+        XuatMangSoNguyen(arr);
+    }
 
     //J.Tim so duong nho nhat trong mang
     static void SoDuongNhoNhat(int[] arr)
@@ -103,24 +132,36 @@ internal class Chuong7_Bai1
         Console.WriteLine($"Phan tu lon nhat trong mang la {max}");
     }
 
-
     //H.Tim vi tri so nguyen to dau tien trong mang neu co 
     static void SoNguyenToDauTien(int[] arr)
     {
-        int dem = 0;
+        //int dem = 0;
+        //for (int i = 0; i < arr.Length; i++)
+        //{
+        //    if (KiemTraSoNguyenTo(arr[i]))
+        //    {
+        //        dem++;
+        //        if (dem == 1)
+        //        {
+        //            Console.WriteLine($"Vi tri so nguyen to dau tien trong mang la vi tri thu a[{i}]");
+        //        }            
+        //    }
+        //}
 
-        for (int i = 0; i < arr.Length; i++)
+        bool found = false;
+        for (int i = 0; i < arr.Length; i++) 
         {
-            if (KiemTraSoNguyenTo(arr[i]))
+            if(KiemTraSoNguyenTo(arr[i]))
             {
-                dem++;
-                if (dem == 1)
-                {
-                    Console.WriteLine($"Vi tri so nguyen to dau tien trong mang la vi tri thu arr[{i}]");
-                }
+                Console.WriteLine($"Vi tri so nguyen to dau tien trong mang la vi tri thu a[{i}]");
+                found = true;
+                break;
             }
         }
-
+        if (!found) 
+        {
+            Console.WriteLine("Mang khong co so nguyen to nao");
+        }
     }
 
     //G.Tim vi tri cuoi cung cua x trong mang
@@ -144,7 +185,7 @@ internal class Chuong7_Bai1
         int dem = 0;
         foreach (var item in arr)
         {
-            if (KiemTraSoHoanHao(item))
+            if (KiemTraSoHoanThien(item))
             {
                 dem++;
             }
@@ -152,7 +193,7 @@ internal class Chuong7_Bai1
         Console.WriteLine(dem); ;
     }
 
-    static bool KiemTraSoHoanHao(int n)
+    static bool KiemTraSoHoanThien(int n)
     {
         long tongUS = TinhTongCacUocSo(n) - n;
         return tongUS == n;
