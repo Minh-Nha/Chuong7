@@ -29,6 +29,7 @@ internal class Chuong7_Bai5
         Console.WriteLine();
         bool coGiaTriTrungNhau = GiaTriTrungNhau(arr);
         Console.WriteLine(coGiaTriTrungNhau ? "Trong mang co gia tri trung nhau" : "Trong mang khong co gia tri trung nhau");
+        //Helo
     }
 
     //Kiem tra mang co gia tri trung nhau hay khong
