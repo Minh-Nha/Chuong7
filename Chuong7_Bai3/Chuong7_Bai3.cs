@@ -15,9 +15,6 @@ internal class Chuong7_Bai3
         int[] arrC = TinhTongMang(arrA, arrB);
         //
         XuatMang("arrC", arrC);
-        
-
-
     }
 
     static void XuatMang(string tenMang, int[] arr)
