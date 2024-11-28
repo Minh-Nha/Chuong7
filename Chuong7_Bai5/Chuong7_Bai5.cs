@@ -50,7 +50,6 @@ internal class Chuong7_Bai5
         Array.Sort(arr);// Phuong thuc sap xep cac gia tri cua mang theo thu tu tang dan
         Array.Reverse(arr);//Phuong thuc dao nguoc cac gia tri cua mang
     }
-
     //Tim gia tri lon nhat tron mang
     static int GiaTriLonNhat(int[] arr)
     {
