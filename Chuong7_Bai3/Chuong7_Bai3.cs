@@ -19,7 +19,7 @@ internal class Chuong7_Bai3
 
     static void XuatMang(string tenMang, int[] arr)
     {
-        Console.WriteLine($"Mang {tenMang} la: ");
+        Console.WriteLine($"Tong mang {tenMang} la: ");
         for (int i = 0; i < arr.Length; i++)
         {
             Console.Write(arr[i] + " ");
