@@ -20,7 +20,7 @@ internal class Chuong7_Bai4
 
         XuatMang("arrB", arrB);
         XuatMang("arrc", arrC);
-
+        //Helo
     }
 
     // XuatMang
