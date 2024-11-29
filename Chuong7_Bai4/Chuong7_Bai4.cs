@@ -17,7 +17,8 @@ internal class Chuong7_Bai4
 
         //
         TachChanLe(arrA, arrB, arrC);
-
+        
+        //
         XuatMang("arrB", arrB);
         XuatMang("arrc", arrC);
         //Helo
