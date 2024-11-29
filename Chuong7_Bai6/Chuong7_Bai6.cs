@@ -1,17 +1,34 @@
 ﻿namespace Chuong7_Bai6;
 
-internal class Program
+internal class Chuong7_Bai6
 {
     static void Main(string[] args)
     {
         int N = 0;
         N = NhapSoNguyen(N);
-        int[] arr = NhapMangSoNguyen(N);
+        int[] arrA = NhapMangSoNguyen(N);
         //
-        int mangSoDuong = DemPhanTuDuong(arr);
+        int mangSoDuong = DemPhanTuDuong(arrA);
         int mangSoAm = N - mangSoDuong;
         //
+        int[] arrB = new int[mangSoDuong];
+        int[] arrC = new int[mangSoAm];
+        //
+        TachSoAmDuong(arrA, arrB, arrC);
+        //
+        XuatMang("arrB[]",arrB);
+        XuatMang("arrC[]", arrC);
+    }
 
+    //Xuat mang
+    static void XuatMang(string tenMang,int[] arr)
+    {
+        Console.WriteLine($"{tenMang} : ");
+        foreach (int i in arr)
+        {
+            Console.Write(i + "  ");
+        }
+        Console.WriteLine();
     }
 
     //Tach phan tu chan le

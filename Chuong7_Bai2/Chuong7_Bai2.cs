@@ -28,7 +28,10 @@ internal class Chuong7_Bai2
             Console.WriteLine("Nhap mot so nguyen: ");
             if (int.TryParse(Console.ReadLine(), out input))
             {
-                if (input == -1) break;
+                if (input == -1)
+                {
+                    break;
+                }
                 arr[dem] = input;
                 dem++;
             }else
