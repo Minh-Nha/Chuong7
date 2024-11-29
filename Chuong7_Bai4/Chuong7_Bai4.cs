@@ -5,7 +5,7 @@ internal class Chuong7_Bai4
     static void Main(string[] args)
     {
         int N = 0;
-
+        N = NhapSoNguyen(N);
         int[] arrA = NhapMang("arrA", N);
         //Dem phan tu chan le
         int soPhanTuChan = DemPhanTuChan(arrA);
@@ -76,5 +76,12 @@ internal class Chuong7_Bai4
             int.TryParse(Console.ReadLine(), out arr[i]);
         }
         return arr;
+    }
+
+    static int NhapSoNguyen(int N)
+    {
+        Console.WriteLine("Nhap so phan tu cua mang");
+        int.TryParse(Console.ReadLine(), out N);
+        return N;
     }
 }
