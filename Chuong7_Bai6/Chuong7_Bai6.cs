@@ -30,7 +30,6 @@ internal class Chuong7_Bai6
         }
         Console.WriteLine();
     }
-
     //Tach phan tu chan le
     static void TachSoAmDuong(int[] arrA, int[] arrB, int[] arrC)
     {
@@ -47,7 +46,6 @@ internal class Chuong7_Bai6
             }
         }
     }
-
     //Dem so phan tu chan
     static int DemPhanTuDuong(int[] arr)
     {
@@ -72,7 +70,6 @@ internal class Chuong7_Bai6
         }
         return intArr;
     }
-
     //Nhap so nguyen N
     static int NhapSoNguyen(int N)
     {
