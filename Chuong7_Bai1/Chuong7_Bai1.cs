@@ -1,5 +1,7 @@
 ﻿namespace Chuong7_Bai1;
-
+//Bai 1: Viet chuong trinh nhap 1 so nguyen tu 1 den 100, thuc hien cac yeu cau sau
+//Ngay 28/11/2024
+//Nguyen Ngoc Minh Nha
 internal class Chuong7_Bai1
 {
     static void Main(string[] args)

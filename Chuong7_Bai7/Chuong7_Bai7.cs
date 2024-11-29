@@ -1,5 +1,9 @@
 ﻿using System;
-
+//Bài 7: mảng arrA có N phần tử : 
+        //Viết hàm xoá các phần tử có giá trị bằng X trong mảng, với X nhập từ bàn phím 
+        //Viết hàm chèn thêm một số nguyên X vào số nguyên tố đầu tiên có trong mảng, với X được nhập từ bàn phím
+//29/11/2024
+//Nguyễn Ngọc Minh Nhã
 namespace Chuong7_Bai7;
 
 internal class Chuong7_Bai7

@@ -1,5 +1,7 @@
 ﻿namespace Chuong7_Bai2;
-
+//Bai 2: Nhap vao mang so nguyen, nhap sai yeu cau nhap lai, viec nhap chi dung lai khi nguoi dung nhap -1
+//Ngay 28/11/2024
+//Nguyen Ngoc Minh Nha
 internal class Chuong7_Bai2
 {
     static void Main(string[] args)

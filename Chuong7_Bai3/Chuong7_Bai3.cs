@@ -1,5 +1,7 @@
 ﻿namespace Chuong7_Bai3;
-
+//Nhap hai mang arrA, arrB co N phan tu trong moi mang, arrC la mang cua tong arrA + arrB
+//29/11/2024
+//Nguyen Ngoc Minh Nha
 internal class Chuong7_Bai3
 {
     static void Main(string[] args)

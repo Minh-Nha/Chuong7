@@ -1,5 +1,7 @@
 ﻿using System;
-
+//Bai 5: Viet chuong trinh nhap 1 so nguyen tu 1 den 100, thuc hien cac yeu cau sau
+//Ngay 28/11/2024
+//Nguyen Ngoc Minh Nha
 namespace Chuong7_Bai5;
 
 internal class Chuong7_Bai5

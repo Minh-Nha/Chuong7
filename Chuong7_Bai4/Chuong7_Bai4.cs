@@ -1,5 +1,7 @@
 ﻿namespace Chuong7_Bai4;
-
+//Bai 4 : Mang so nguyen arrA co N phan tu, tao ra 2 mang arrB gom phan tu chan va arrC gom phan tu le
+//29/11/2024
+//Nguyen Ngoc Minh Nha
 internal class Chuong7_Bai4
 {
     static void Main(string[] args)
@@ -11,17 +13,17 @@ internal class Chuong7_Bai4
         int soPhanTuChan = DemPhanTuChan(arrA);
         int soPhanTuLe = N - soPhanTuChan;
 
-        //
+        //Khai bao arrB, arrC
         int[] arrB = new int[soPhanTuChan];
         int[] arrC = new int[soPhanTuLe];
 
-        //
+        //Tach phan tu chan le
         TachChanLe(arrA, arrB, arrC);
-        
-        //
+
+        //Xuat mang arrB, arrC
         XuatMang("arrB", arrB);
         XuatMang("arrc", arrC);
-        //Helo
+        
     }
 
     // XuatMang
